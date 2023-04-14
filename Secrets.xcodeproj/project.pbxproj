@@ -51,7 +51,6 @@
 		20CF738329D39D3500A5D038 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		20CF738529D3A4A600A5D038 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		20CF738729D3A4BC00A5D038 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		20CF739329DA74F000A5D038 /* Components */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Components; path = ../Components; sourceTree = "<group>"; };
 		20E59F7629D1370000923797 /* Secrets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Secrets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E59F7929D1370000923797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20E59F7B29D1370000923797 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,7 +134,6 @@
 		20E59F6D29D1370000923797 = {
 			isa = PBXGroup;
 			children = (
-				20CF739329DA74F000A5D038 /* Components */,
 				20E59F7829D1370000923797 /* Secrets */,
 				20E59F8F29D1370300923797 /* SecretsTests */,
 				20E59F9929D1370300923797 /* SecretsUITests */,
