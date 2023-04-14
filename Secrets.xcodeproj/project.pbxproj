@@ -8,16 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		200B99AF29D2A59300FFA365 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B99AE29D2A59300FFA365 /* LoginViewController.swift */; };
-		200B99B229D2A96400FFA365 /* NavigationController+Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B99B129D2A96400FFA365 /* NavigationController+Alias.swift */; };
-		200B99B529D2B12B00FFA365 /* ViewController+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B99B429D2B12B00FFA365 /* ViewController+Push.swift */; };
 		200B99B729D2B1D200FFA365 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B99B629D2B1D200FFA365 /* MainCoordinator.swift */; };
 		20CF737B29D3948000A5D038 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF737A29D3948000A5D038 /* HomeViewController.swift */; };
-		20CF737E29D39A6500A5D038 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF737D29D39A6500A5D038 /* View.swift */; };
-		20CF738029D39B8900A5D038 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF737F29D39B8900A5D038 /* Model.swift */; };
 		20CF738229D39C7400A5D038 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF738129D39C7400A5D038 /* HomeView.swift */; };
 		20CF738429D39D3500A5D038 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF738329D39D3500A5D038 /* HomeViewModel.swift */; };
 		20CF738629D3A4A600A5D038 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF738529D3A4A600A5D038 /* LoginView.swift */; };
 		20CF738829D3A4BC00A5D038 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF738729D3A4BC00A5D038 /* LoginViewModel.swift */; };
+		20CF739029DA6BE200A5D038 /* Components in Frameworks */ = {isa = PBXBuildFile; productRef = 20CF738F29DA6BE200A5D038 /* Components */; };
 		20E59F7A29D1370000923797 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E59F7929D1370000923797 /* AppDelegate.swift */; };
 		20E59F7C29D1370000923797 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E59F7B29D1370000923797 /* SceneDelegate.swift */; };
 		20E59F8329D1370200923797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20E59F8229D1370200923797 /* Assets.xcassets */; };
@@ -26,9 +23,7 @@
 		20E59F9B29D1370300923797 /* SecretsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E59F9A29D1370300923797 /* SecretsUITests.swift */; };
 		20E59F9D29D1370300923797 /* SecretsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E59F9C29D1370300923797 /* SecretsUITestsLaunchTests.swift */; };
 		20E59FAB29D137C000923797 /* Constraints in Frameworks */ = {isa = PBXBuildFile; productRef = 20E59FAA29D137C000923797 /* Constraints */; };
-		20E59FAF29D1392700923797 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E59FAE29D1392700923797 /* Coordinator.swift */; };
 		20E59FB229D13A2D00923797 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E59FB129D13A2D00923797 /* LoginCoordinator.swift */; };
-		20E59FB629D13CEA00923797 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E59FB529D13CEA00923797 /* Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,16 +45,13 @@
 
 /* Begin PBXFileReference section */
 		200B99AE29D2A59300FFA365 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		200B99B129D2A96400FFA365 /* NavigationController+Alias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationController+Alias.swift"; sourceTree = "<group>"; };
-		200B99B429D2B12B00FFA365 /* ViewController+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Push.swift"; sourceTree = "<group>"; };
 		200B99B629D2B1D200FFA365 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		20CF737A29D3948000A5D038 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		20CF737D29D39A6500A5D038 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		20CF737F29D39B8900A5D038 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		20CF738129D39C7400A5D038 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		20CF738329D39D3500A5D038 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		20CF738529D3A4A600A5D038 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		20CF738729D3A4BC00A5D038 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		20CF739329DA74F000A5D038 /* Components */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Components; path = ../Components; sourceTree = "<group>"; };
 		20E59F7629D1370000923797 /* Secrets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Secrets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E59F7929D1370000923797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20E59F7B29D1370000923797 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,9 +63,7 @@
 		20E59F9629D1370300923797 /* SecretsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecretsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E59F9A29D1370300923797 /* SecretsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretsUITests.swift; sourceTree = "<group>"; };
 		20E59F9C29D1370300923797 /* SecretsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		20E59FAE29D1392700923797 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		20E59FB129D13A2D00923797 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		20E59FB529D13CEA00923797 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20CF739029DA6BE200A5D038 /* Components in Frameworks */,
 				20E59FAB29D137C000923797 /* Constraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,22 +114,10 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		200B99B029D2A94700FFA365 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				200B99B129D2A96400FFA365 /* NavigationController+Alias.swift */,
-				200B99B429D2B12B00FFA365 /* ViewController+Push.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		200B99B329D2A98200FFA365 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				20E59FAC29D1390A00923797 /* Delegate */,
-				20E59FAD29D1391700923797 /* Coordinator */,
-				20CF737C29D39A3900A5D038 /* View */,
-				200B99B029D2A94700FFA365 /* Extensions */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -153,26 +132,10 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		20CF737C29D39A3900A5D038 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				20CF737F29D39B8900A5D038 /* Model.swift */,
-				20CF737D29D39A6500A5D038 /* View.swift */,
-				20E59FB529D13CEA00923797 /* Controller.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		20CF738A29D3A8DF00A5D038 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		20E59F6D29D1370000923797 = {
 			isa = PBXGroup;
 			children = (
+				20CF739329DA74F000A5D038 /* Components */,
 				20E59F7829D1370000923797 /* Secrets */,
 				20E59F8F29D1370300923797 /* SecretsTests */,
 				20E59F9929D1370300923797 /* SecretsUITests */,
@@ -198,7 +161,6 @@
 				20E59F8429D1370200923797 /* LaunchScreen.storyboard */,
 				200B99B329D2A98200FFA365 /* Base */,
 				200B99AC29D2A57F00FFA365 /* Modules */,
-				20CF738A29D3A8DF00A5D038 /* Components */,
 			);
 			path = Secrets;
 			sourceTree = "<group>";
@@ -229,14 +191,6 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
-		20E59FAD29D1391700923797 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				20E59FAE29D1392700923797 /* Coordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,6 +209,7 @@
 			name = Secrets;
 			packageProductDependencies = (
 				20E59FAA29D137C000923797 /* Constraints */,
+				20CF738F29DA6BE200A5D038 /* Components */,
 			);
 			productName = Secrets;
 			productReference = 20E59F7629D1370000923797 /* Secrets.app */;
@@ -330,6 +285,7 @@
 			mainGroup = 20E59F6D29D1370000923797;
 			packageReferences = (
 				20E59FA929D137C000923797 /* XCRemoteSwiftPackageReference "Constraints" */,
+				20CF738E29DA6BE200A5D038 /* XCRemoteSwiftPackageReference "Components" */,
 			);
 			productRefGroup = 20E59F7729D1370000923797 /* Products */;
 			projectDirPath = "";
@@ -374,20 +330,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				200B99AF29D2A59300FFA365 /* LoginViewController.swift in Sources */,
-				20E59FB629D13CEA00923797 /* Controller.swift in Sources */,
 				20CF738229D39C7400A5D038 /* HomeView.swift in Sources */,
 				20CF738629D3A4A600A5D038 /* LoginView.swift in Sources */,
 				20CF738829D3A4BC00A5D038 /* LoginViewModel.swift in Sources */,
-				20E59FAF29D1392700923797 /* Coordinator.swift in Sources */,
-				200B99B229D2A96400FFA365 /* NavigationController+Alias.swift in Sources */,
 				20E59FB229D13A2D00923797 /* LoginCoordinator.swift in Sources */,
 				20CF737B29D3948000A5D038 /* HomeViewController.swift in Sources */,
 				20E59F7A29D1370000923797 /* AppDelegate.swift in Sources */,
-				200B99B529D2B12B00FFA365 /* ViewController+Push.swift in Sources */,
 				20CF738429D39D3500A5D038 /* HomeViewModel.swift in Sources */,
 				200B99B729D2B1D200FFA365 /* MainCoordinator.swift in Sources */,
-				20CF737E29D39A6500A5D038 /* View.swift in Sources */,
-				20CF738029D39B8900A5D038 /* Model.swift in Sources */,
 				20E59F7C29D1370000923797 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,6 +672,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		20CF738E29DA6BE200A5D038 /* XCRemoteSwiftPackageReference "Components" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/romulofebasi/Components";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		20E59FA929D137C000923797 /* XCRemoteSwiftPackageReference "Constraints" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/romulofebasi/Constraints";
@@ -733,6 +691,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		20CF738F29DA6BE200A5D038 /* Components */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20CF738E29DA6BE200A5D038 /* XCRemoteSwiftPackageReference "Components" */;
+			productName = Components;
+		};
 		20E59FAA29D137C000923797 /* Constraints */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 20E59FA929D137C000923797 /* XCRemoteSwiftPackageReference "Constraints" */;

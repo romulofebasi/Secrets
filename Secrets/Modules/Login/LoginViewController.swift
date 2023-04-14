@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import Constraints
 
 final class LoginViewController: ViewController {
     override init() {
+        let view = LoginView()
+        view.viewModel = LoginViewModel()
         super.init()
+        UserDefaults.standard.set(true, forKey: "logged")
+        self.view = view
     }
     
     required init?(coder: NSCoder) {

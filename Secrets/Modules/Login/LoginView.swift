@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Constraints
 
 final class LoginView: View {
     var viewModel: LoginViewModelProtocol? {
@@ -33,9 +34,21 @@ final class LoginView: View {
         label.text = model.text
     }
     
-    override func buildHierarchy() {}
-    override func buildConstraints() {}
-    override func render() {}
+    override func configure() {}
+    
+    override func buildHierarchy() {
+        addView(label)
+    }
+    
+    override func buildConstraints() {
+        label.layout.make { make in
+            make.top.equalTo(layout.safeArea.top, constant: 20)
+        }
+    }
+    
+    override func render() {
+        backgroundColor = .blue
+    }
     
     override func buildAccessibility() {}
     override func updateAccessibility() {}

@@ -6,10 +6,16 @@
 //
 
 import UIKit
+import Constraints
 
 final class HomeViewController: ViewController {
     override init() {
+        let view = HomeView()
+        view.viewModel = HomeViewModel()
+        
         super.init()
+        
+        self.view = view
     }
     
     required init?(coder: NSCoder) {

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Constraints
 
 internal protocol HomeViewModelProtocol: ViewModel {
     var text: String { get }
@@ -15,6 +16,6 @@ internal struct HomeViewModel: HomeViewModelProtocol {
     let text: String
     
     init() {
-        self.text = "Texto"
+        self.text = "Home"
     }
 }
