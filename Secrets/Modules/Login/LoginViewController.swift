@@ -13,7 +13,13 @@ final class LoginViewController: ViewController {
         let view = LoginView()
         view.viewModel = LoginViewModel()
         super.init()
-        UserDefaults.standard.set(true, forKey: "logged")
+        self.view = view
+    }
+    
+    init(viewModel: LoginViewModelProtocol) {
+        let view = LoginView()
+        view.viewModel = viewModel
+        super.init()
         self.view = view
     }
     

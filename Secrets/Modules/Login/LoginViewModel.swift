@@ -9,14 +9,17 @@ import Foundation
 import Constraints
 
 internal protocol LoginViewModelProtocol: ViewModel {
-    var text: String { get }
+    var title: String { get }
+    var buttonText: String { get }
 }
 
 internal struct LoginViewModel: LoginViewModelProtocol {
-    let text: String
-    
+    let title: String
+    let buttonText: String
+
     init() {
-        self.text = "Login"
+        self.title = "Projeto"
+        self.buttonText = "Teste de Aplicativo"
     }
 }
 

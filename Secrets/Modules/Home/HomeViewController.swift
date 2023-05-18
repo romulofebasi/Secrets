@@ -15,6 +15,9 @@ final class HomeViewController: ViewController {
         
         super.init()
         
+        UserDefaults.standard.set(false, forKey: "logged")
+
+        
         self.view = view
     }
     

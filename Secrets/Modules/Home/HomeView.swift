@@ -3,7 +3,7 @@
 //  Secrets
 //
 //  Created by Rômulo Lobo on 28/03/23.
-//‚
+//
 
 import UIKit
 import Constraints
@@ -35,7 +35,7 @@ final class HomeView: View {
         }
         
         label.text = model.text
-        button.text = "Botão Enorme"
+        button.text = "Componente Botão"
     }
     
     override func configure() {}

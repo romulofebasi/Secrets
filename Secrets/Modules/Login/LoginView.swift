@@ -7,6 +7,7 @@
 
 import UIKit
 import Constraints
+import Components
 
 final class LoginView: View {
     var viewModel: LoginViewModelProtocol? {
@@ -15,10 +16,12 @@ final class LoginView: View {
         }
     }
     
-    let label: UILabel
+    let titleLabel: UILabel
+    let button: Button
     
     override init() {
-        self.label = UILabel()
+        self.titleLabel = UILabel()
+        self.button = Button(type: .primary)
         super.init()
     }
     
@@ -31,23 +34,36 @@ final class LoginView: View {
             return
         }
         
-        label.text = model.text
+        titleLabel.text = model.title
+        button.text = model.buttonText
     }
     
     override func configure() {}
     
     override func buildHierarchy() {
-        addView(label)
+        addView(titleLabel, button)
     }
     
     override func buildConstraints() {
-        label.layout.make { make in
+        titleLabel.layout.make { make in
             make.top.equalTo(layout.safeArea.top, constant: 20)
+        }
+        
+        button.layout.make { make in
+            make.top.equalTo(titleLabel.layout.top, constant: 20)
         }
     }
     
     override func render() {
-        backgroundColor = .blue
+        let background = UIImage(named: "LoginBackground_1")
+        let imageView = UIImageView(frame: bounds)
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = center
+        
+        self.addSubview(imageView)
+        self.sendSubviewToBack(imageView)
     }
     
     override func buildAccessibility() {}
