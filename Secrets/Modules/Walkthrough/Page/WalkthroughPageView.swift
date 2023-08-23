@@ -1,22 +1,22 @@
 //
-//  LoginView.swift
+//  WalkthroughPageView.swift
 //  Secrets
 //
-//  Created by Rômulo Lobo on 28/03/23.
+//  Created by Romulo Lobo Fernandes Barros da Silva on 06/08/23.
 //
 
 import UIKit
 import Constraints
 import Components
 
-internal protocol LoginViewDelegate: AnyObject {
-    func onTapButton()
+protocol WalkthroughPageViewDelegate: AnyObject {
+    func onTapContinueButton(_ pageNumber: Int)
 }
 
-final class LoginView: View {
-    weak var delegate: LoginViewDelegate?
+final class WalkthroughPageView: View {
+    weak var delegate: WalkthroughPageViewDelegate?
     
-    var viewModel: LoginViewModelProtocol? {
+    var viewModel: WalkthroughPageViewModelProtocol? {
         didSet {
             update()
         }
@@ -36,16 +36,13 @@ final class LoginView: View {
     }
     
     override func update() {
-        guard let model = viewModel else {
-            return
-        }
-        
+        guard let model = viewModel else { return }
         titleLabel.text = model.title
-        continueButton.text = model.continueButtonText
+        continueButton.text = model.button
     }
     
     override func configure() {
-        continueButton.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
+        continueButton.addTarget(self, action: #selector(onTapContinueButton), for: .touchUpInside)
     }
     
     override func buildHierarchy() {
@@ -65,20 +62,19 @@ final class LoginView: View {
     }
     
     override func render() {
-        backgroundColor = Theme.color.background
+        backgroundColor = .clear // Theme.color.background
         
-        continueButton.titleLabel?.font = R.font.nunitoSans12ptExtraLight(size: Theme.size.xl)
+        continueButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
     }
     
     override func buildAccessibility() {}
     override func updateAccessibility() {}
 }
 
-extension LoginView {
-    
+extension WalkthroughPageView {
     @objc
-    private func onTapButton() {
-        delegate?.onTapButton()
+    private func onTapContinueButton() {
+        guard let model = viewModel else { return }
+        delegate?.onTapContinueButton(model.number)
     }
-    
 }

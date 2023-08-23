@@ -9,7 +9,13 @@ import UIKit
 import Constraints
 import Components
 
+internal protocol HomeViewDelegate: AnyObject {
+    func onTapButton()
+}
+
 final class HomeView: View {
+    weak var delegate: HomeViewDelegate?
+    
     var viewModel: HomeViewModelProtocol? {
         didSet {
             update()
@@ -38,7 +44,9 @@ final class HomeView: View {
         button.text = "Componente Botão"
     }
     
-    override func configure() {}
+    override func configure() {
+        button.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
+    }
     
     override func buildHierarchy() {
         addView(label, button)
@@ -60,4 +68,11 @@ final class HomeView: View {
     
     override func buildAccessibility() {}
     override func updateAccessibility() {}
+}
+
+extension HomeView {
+    @objc
+    private func onTapButton() {
+        delegate?.onTapButton()
+    }
 }

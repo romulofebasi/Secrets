@@ -10,16 +10,16 @@ import Constraints
 
 internal protocol LoginViewModelProtocol: ViewModel {
     var title: String { get }
-    var buttonText: String { get }
+    var continueButtonText: String { get }
 }
 
 internal struct LoginViewModel: LoginViewModelProtocol {
     let title: String
-    let buttonText: String
+    let continueButtonText: String
 
     init() {
         self.title = "Projeto"
-        self.buttonText = "Teste de Aplicativo"
+        self.continueButtonText = "Começar Agora"
     }
 }
 
