@@ -10,17 +10,14 @@ import Constraints
 import Components
 
 final class WalkthroughView: View {
-    var viewModel: WalkthroughPageViewModelProtocol? {
-        didSet {
-            update()
-        }
-    }
     
-    let circles: CAShapeLayer
+    var viewModel: WalkthroughViewModelProtocol
+    var shapes: [CAShapeLayer]
     let blurView: UIVisualEffectView
     
-    override init() {
-        self.circles = CAShapeLayer()
+    init(view: UIView) {
+        self.viewModel = WalkthroughViewModel(view: view)
+        self.shapes = []
         self.blurView = UIVisualEffectView()
         super.init()
     }
@@ -29,20 +26,15 @@ final class WalkthroughView: View {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func update() {
-        guard let model = viewModel else { return }
-    }
-    
     override func configure() {
-        circles.path = bezierPath(radius: 120).cgPath
-        circles.fillColor = UIColor.red.cgColor
-        circles.opacity = 1
-        circles.lineCap = .round
-        circles.lineWidth = 20.0
+        
     }
     
     override func buildHierarchy() {
-        layer.addSublayer(circles)
+        shapes.append(createShapeLayer(.red, for: 0))
+        shapes.append(createShapeLayer(.green, for: 1))
+        shapes.append(createShapeLayer(.blue, for: 2))
+        
         addView(blurView)
     }
     
@@ -57,7 +49,8 @@ final class WalkthroughView: View {
     
     override func render() {
         backgroundColor = .clear
-        blurView.effect = UIBlurEffect(style: UIBlurEffect.Style.light)
+        
+        blurView.effect = UIBlurEffect(style: UIBlurEffect.Style.systemChromeMaterial)
         blurView.frame = bounds
         blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
@@ -68,14 +61,30 @@ final class WalkthroughView: View {
 
 extension WalkthroughView {
     public func onChangePage() {
-        
+        //animatePath()
     }
     
-    private func bezierPath(radius: CGFloat) -> UIBezierPath {
-        let startPoint = CGFloat(-Double.pi / 2)
-        let endPoint = CGFloat(3 * Double.pi / 2)
-        let centerPoint = CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0)
-        
-        return UIBezierPath(arcCenter: centerPoint, radius: radius, startAngle: startPoint, endAngle: endPoint, clockwise: true)
+    private func createShapeAnimation(_ shape: CAShapeLayer, for index: Int) {
+        let animation = CABasicAnimation(keyPath: "path")
+        animation.autoreverses = true
+        animation.duration = 7
+        animation.repeatCount = .infinity
+        animation.toValue = viewModel.paths[index].next.path.cgPath
+        animation.fillMode = .forwards
+        animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        animation.isRemovedOnCompletion = false
+        shape.add(animation, forKey: nil)
+    }
+    
+    private func createShapeLayer(_ color: UIColor, for index: Int) -> CAShapeLayer {
+        let shape = CAShapeLayer()
+        shape.path = viewModel.paths[index].path.cgPath
+        shape.fillColor = color.cgColor
+        shape.opacity = 0.90
+        shape.lineCap = .round
+        shape.lineWidth = 20.0
+        layer.addSublayer(shape)
+        createShapeAnimation(shape, for: index)
+        return shape
     }
 }

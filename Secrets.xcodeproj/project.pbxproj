@@ -81,7 +81,6 @@
 		B41DBA6F2A809B2D00D80932 /* JosefinSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Medium.ttf"; sourceTree = "<group>"; };
 		B41DBA702A809B2D00D80932 /* JosefinSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Regular.ttf"; sourceTree = "<group>"; };
 		B41DBA712A809B2E00D80932 /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
-		B41DBA7E2A869A3300D80932 /* Components */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Components; path = ../Components; sourceTree = "<group>"; };
 		B4D1653C2A87538E008482D8 /* WalkthroughPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewModel.swift; sourceTree = "<group>"; };
 		B4D1653E2A87553B008482D8 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		B4D165492A9679FF008482D8 /* WalkthroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
@@ -158,7 +157,6 @@
 		20E59F6D29D1370000923797 = {
 			isa = PBXGroup;
 			children = (
-				B41DBA7E2A869A3300D80932 /* Components */,
 				20E59F7829D1370000923797 /* Secrets */,
 				20E59F8F29D1370300923797 /* SecretsTests */,
 				20E59F9929D1370300923797 /* SecretsUITests */,
